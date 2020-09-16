@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Table = styled.table`
@@ -56,5 +56,9 @@ function TransactionsHistory({ items }) {
     </Table>
   );
 }
+
+TransactionsHistory.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default TransactionsHistory;
